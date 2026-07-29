@@ -189,9 +189,9 @@
 </div>
 </section>
 <!-- Slide 3: Hook -->
-<section class="slide flex items-center justify-center p-xl" id="slide-2">
-<div class="max-w-4xl text-center">
-<blockquote class="text-4xl md:text-6xl text-primary leading-tight italic">
+<section class="slide flex flex-col items-center justify-center p-xl text-center" id="slide-quote">
+<div class="w-full max-w-6xl bg-surface-container-lowest p-xl rounded-4xl card-shadow">
+<blockquote class="text-3xl md:text-4xl text-primary leading-relaxed italic font-display">
     "Si pudieran crear una campaña para cualquier producto, ¿qué mensaje usarían para captar la atención del público?"
 </blockquote>
 </div>
@@ -232,7 +232,7 @@
 </section>
 <!-- Slide 5: Goal to Campaign -->
 <section class="slide flex flex-col items-center justify-center p-xl" id="slide-4">
-<h2 class="font-display-lg text-display-lg text-primary mb-xl">Del Objetivo a la Ejecución</h2>
+<h2 class="font-display-lg text-display-lg text-primary mb-xl">Del objetivo a una campaña completa</h2>
 <div class="flex flex-col md:flex-row items-center gap-lg w-full max-w-5xl">
 <!-- Inputs -->
 <div class="flex-1 w-full p-lg bg-surface-container-low rounded-2xl border border-outline-variant">
@@ -264,6 +264,95 @@
 </div>
 </section>
 <!-- Slide 6: Technical Architecture -->
+ <section class="slide flex flex-col items-center justify-center p-xl" id="slide-como-esta-construido">
+<div class="w-full max-w-6xl bg-surface-container-lowest p-lg rounded-2xl card-shadow flex flex-col items-center">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-display-lg text-primary mb-xs">ARQUITECTURA</h2>
+<p class="font-body-base text-body-base text-on-surface-variant">Cinco piezas con una responsabilidad clara cada una. La aplicación nunca habla directamente con un proveedor de modelos.</p>
+</div>
+
+<!-- Estructura del flujo de arquitectura -->
+<div class="w-full flex flex-col gap-lg items-center">
+<!-- Fila principal de componentes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-md w-full items-center">
+<!-- 1. Navegador -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-primary w-full"></div>
+<div class="p-md flex flex-col h-full justify-between text-center">
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Navegador</h3>
+<p class="text-xs text-on-surface-variant">panel de campañas e historial</p>
+</div>
+</div>
+</div>
+
+<!-- 2. Frontend -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-green-500 w-full"></div>
+<div class="p-md flex flex-col h-full justify-between text-center">
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Frontend</h3>
+<p class="text-xs text-on-surface-variant">Next.js<br>React y TypeScript</p>
+</div>
+</div>
+</div>
+
+<!-- 3. Backend (Principal destacado) -->
+<div class="bg-primary text-on-primary rounded-xl overflow-hidden flex flex-col shadow-md text-center p-md justify-between">
+<div>
+<span class="text-[10px] font-mono text-green-400 block mb-xs">SSE</span>
+<h3 class="font-headline-sm text-sm font-bold mb-xs">Backend</h3>
+<p class="text-xs opacity-90 mb-xs">FastAPI<br>LangGraph</p>
+</div>
+<span class="text-[11px] font-medium text-green-400 pt-xs border-t border-white/10">los cinco agentes</span>
+</div>
+
+<!-- 4. Pasarela -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-orange-500 w-full"></div>
+<div class="p-md flex flex-col h-full justify-between text-center">
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Pasarela</h3>
+<p class="text-xs text-on-surface-variant">única salida hacia los modelos</p>
+</div>
+</div>
+</div>
+
+<!-- 5. Modelos -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-primary w-full"></div>
+<div class="p-md flex flex-col h-full justify-between text-center">
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Modelos</h3>
+<p class="text-xs text-on-surface-variant">principal<br>reserva · local</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Fila inferior: Base de datos y Generación de imágenes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl w-full max-w-3xl mt-sm">
+<!-- Base de datos -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-primary w-full"></div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Base de datos</h3>
+<p class="text-xs text-on-surface-variant">PostgreSQL · historial de ejecuciones</p>
+</div>
+</div>
+
+<!-- Generación de imágenes -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden flex flex-col card-shadow">
+<div class="h-1.5 bg-orange-500 w-full"></div>
+<div class="p-md text-center">
+<h3 class="font-headline-sm text-sm font-bold text-primary mb-xs">Generación de imágenes</h3>
+<p class="text-xs text-on-surface-variant">proveedor externo</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section class="slide flex flex-col items-center justify-center p-xl" id="slide-cinco-agentes">
 <div class="w-full max-w-6xl bg-surface-container-lowest p-lg rounded-2xl card-shadow flex flex-col items-center">
 <div class="text-center mb-lg">
@@ -649,15 +738,7 @@
     }
 </style>
 <!-- Slide 12: Demo Slide -->
-<section class="slide flex flex-col items-center justify-center p-xl" id="slide-11">
-<h2 class="font-display-lg text-display-lg text-primary mb-xl">Aria en Acción</h2>
-<div class="w-full max-w-5xl aspect-video bg-surface-container-highest rounded-3xl border-4 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="A clean, minimalist UI dashboard of a SaaS application named Aria. It shows a split screen with user inputs on the left and agent-generated campaign previews on the right. Modern cards, subtle shadows, and a professional light blue and white interface. No text, purely illustrative of the software aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtod2BDzRPXd4QKofMnk7Fv8BVTNbF0i0jZblNbCoRvqB_mBp_UzCaY-qq_ZJXRFN5RGUkYzQav0MEropK4otLXjNvurKpnYwpdwnvXPj18KGAwmG2osMu0lugn5nMkcgIKu-80VL5qHQ-hFVMMF0QjYtN5FJk39Fa3Wpcs3Or_0jCCPmWyuOIh53fHo45RN-OXfqN9LwfpKk8KhF4sX_oBaxfiWABaPV7rE2EXCH6Tgm7W9koDRo')"></div>
-<button class="z-10 h-20 w-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl">play_arrow</span>
-</button>
-</div>
-</section>
+
 <!-- Slide 13: Support Agent -->
 <section class="slide flex flex-col items-center justify-center p-xl" id="slide-12">
 <h2 class="font-display-lg text-display-lg text-primary mb-xl">Agente de Soporte Inteligente</h2>
@@ -713,7 +794,7 @@
                 <div class="flex items-center gap-sm">
                     <span class="material-symbols-outlined text-tertiary">arrow_forward</span>
                     <div class="p-md rounded-xl card-shadow flex-1" style="background-color:#DCEFDE;">
-                        <p class="font-bold" style="color:#1E7A34;">GPT-4o</p>
+                        <p class="font-bold" style="color:#1E7A34;">openai/gpt-4.1-mini</p>
                         <p class="text-[11px] text-on-surface-variant">Primary — atiende todas las peticiones mientras funcione</p>
                     </div>
                 </div>
@@ -722,7 +803,7 @@
                 <div class="flex items-center gap-sm">
                     <span class="material-symbols-outlined text-secondary">arrow_forward</span>
                     <div class="p-md rounded-xl card-shadow flex-1" style="background-color:#FBE7D6;">
-                        <p class="font-bold" style="color:#C2620B;">Claude 3.5</p>
+                        <p class="font-bold" style="color:#C2620B;">openai/gpt-4.1-nano</p>
                         <p class="text-[11px] text-on-surface-variant">Reserve — entra solo si el principal falla o se satura, sin intervención</p>
                     </div>
                 </div>
@@ -731,7 +812,7 @@
                 <div class="flex items-center gap-sm">
                     <span class="material-symbols-outlined text-outline">arrow_forward</span>
                     <div class="p-md rounded-xl card-shadow flex-1" style="background-color:#DCE4F5;">
-                        <p class="font-bold text-primary">Llama 3</p>
+                        <p class="font-bold text-primary">Ollama</p>
                         <p class="text-[11px] text-on-surface-variant">Local Handoff — corre en la propia máquina, sin salir de la red</p>
                     </div>
                 </div>
